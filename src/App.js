@@ -2,6 +2,7 @@
 import "./App.css";
 import BookDetails from "./components/BookDetails";
 import Books from "./components/Books";
+import NotFound from "./components/NotFound";
 // import Blog from "./components/Blog";
 // import Comments from "./components/Comments";
 // import Post from "./components/Post";
@@ -23,12 +24,12 @@ function App() {
   return (
     <BooksProvider>
       <div className="app">
-        <h1>All Books</h1>
         <Router>
           <Routes>
             <Route path="/" element={<Books />} />
             <Route path="/books" element={<Navigate to="/" />} />
             <Route path="/books/:bookId" element={<BookDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
       </div>
