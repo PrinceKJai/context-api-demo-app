@@ -1,5 +1,6 @@
 // import { useContext } from "react";
 import "./App.css";
+import BookDetails from "./components/BookDetails";
 import Books from "./components/Books";
 // import Blog from "./components/Blog";
 // import Comments from "./components/Comments";
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Books />} />
             <Route path="/books" element={<Navigate to="/" />} />
+            <Route path="/books/:bookId" element={<BookDetails />} />
           </Routes>
         </Router>
       </div>

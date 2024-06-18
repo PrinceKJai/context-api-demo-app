@@ -3,7 +3,7 @@ import { BooksContext } from "../context/BooksContext";
 
 export default function Books() {
   const books = useContext(BooksContext);
-  //   console.log("booksbooks", books);
+    console.log("books in books", books);
 
   return (
     <div>
