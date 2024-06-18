@@ -5,7 +5,6 @@ import { BooksContext } from "../context/BooksContext";
 export default function BookDetails() {
     const books = useContext(BooksContext);
   const {bookId} = useParams();
-  console.log("books in details", books);
 
   const book = books.find((book) => book.id === parseInt(bookId));
   console.log("book", book);
