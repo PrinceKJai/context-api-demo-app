@@ -3,6 +3,7 @@ import "./App.css";
 import BookDetails from "./components/BookDetails";
 import Books from "./components/Books";
 import NotFound from "./components/NotFound";
+import SecretComponent from "./components/SecretComponent";
 // import Blog from "./components/Blog";
 // import Comments from "./components/Comments";
 // import Post from "./components/Post";
@@ -14,6 +15,7 @@ import {
   BrowserRouter as Router,
   Routes,
 } from "react-router-dom";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   // const userObj = {
@@ -29,6 +31,10 @@ function App() {
             <Route path="/" element={<Books />} />
             <Route path="/books" element={<Navigate to="/" />} />
             <Route path="/books/:bookId" element={<BookDetails />} />
+            <Route
+              path="/secret"
+              element={<PrivateRoute Component={<SecretComponent />} />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
